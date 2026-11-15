@@ -1,0 +1,12 @@
+Codeflow — сторонние компоненты
+
+Pyodide JavaScript package 314.0.7
+- Назначение: запуск Python 3.14 в WebAssembly внутри браузерного Web Worker.
+- Пакет: https://www.npmjs.com/package/pyodide/v/314.0.7
+- Integrity по npm registry: `sha512-0YvXxEhfEdpLfb/XkM2BFAeMROq0iMUX2bzzH9pOttyMcWkwq+HbE5uyuGD82LN7y2q+SNvi/6V5JEsOlD2R1A==`.
+- Исходный код: https://github.com/pyodide/pyodide/tree/b1e4fcc2488962f6360a97f19b9982d6fdb5d16f
+- Лицензия проекта: Mozilla Public License 2.0 (MPL-2.0); полный текст находится в pyodide/LICENSE.
+- Сборка также включает Python standard library; текст лицензии Python Software Foundation находится в pyodide/Python-PSF-LICENSE.txt.
+- В режиме Codeflow используются локальные файлы runtime и стандартная библиотека; дополнительные пакеты с PyPI/CDN не загружаются.
+
+Файлы Pyodide размещены в папке pyodide/. Python Worker ограничивает fetch путями локального runtime; предоставленный локальный сервер задаёт CSP для Worker, ограничивающую внешние соединения и загрузку скриптов. Это defense-in-depth, а не подтверждённая в реальном браузере граница безопасности для враждебного кода. Изменения приложения Codeflow не являются изменениями исходников Pyodide.

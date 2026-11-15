@@ -1,0 +1,25 @@
+{
+  "id": "./index.html",
+  "name": "Codeflow — тренажёр программирования",
+  "short_name": "Codeflow",
+  "description": "Практикум по программированию: курсы, задания и справочник.",
+  "start_url": "./index.html",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f3f0e8",
+  "theme_color": "#c45a78",
+  "icons": [
+    {
+      "src": "icons/codeflow-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "icons/codeflow-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
